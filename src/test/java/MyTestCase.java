@@ -31,7 +31,7 @@ public class MyTestCase {
     //Test Case 1
     @Test
     public  void TC_03() throws Exception {
-        int b=0;
+        int b=1;
         if(b > 0)
         {
             System.out.println("TC_03 passed");
