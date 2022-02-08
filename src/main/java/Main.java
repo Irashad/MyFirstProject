@@ -1,44 +1,31 @@
+
+
 public class Main {
+
+   public static int a=10;
+   public static int b=20;
+    public static int cem=0;
+
+
     public static void main(String[] args) throws Exception {
-        TC_01();
-        TC_02();
-        TC_03();
+     sum();
+     sum2();
+     sum3();
     }
 
-
-    //Test Case 1
-    public static void TC_01() throws Exception {
-        int a=1;
-        if(a > 0)
-        {
-            System.out.println("TC_01 passed");
-        }
-        else{
-            throw new Exception();
-        }
+    public static void sum()
+    {
+       System.out.println("S");
     }
 
-    //Test Case 1
-    public static void TC_02() throws Exception {
-        int a=1;
-        if(a > 0)
-        {
-            System.out.println("TC_02 passed");
-        }
-        else{
-            throw new Exception();
-        }
+    public static void sum2()
+    {
+        System.out.println("a");
     }
 
-    //Test Case 1
-    public static void TC_03() throws Exception {
-        int b=0;
-        if(b > 0)
-        {
-            System.out.println("TC_03 passed");
-        }
-        else{
-            throw new Exception();
-        }
+    public static void sum3()
+    {
+        System.out.println("b");
     }
+
 }
