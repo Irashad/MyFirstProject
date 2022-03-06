@@ -1,3 +1,4 @@
+/*
 package TestCases.Alerts;
 
 import Config.Base;
@@ -22,3 +23,4 @@ public class AlertWithOk extends Base {
 
 
 }
+*/

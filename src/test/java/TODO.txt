@@ -1,0 +1,4 @@
+TODO
+1. Driver Context yaratmaq
+2. Page Object Model qurmaq
+3. Page Factory istifade etmek

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+
+
+    <parameter name="chrome" value="webdriver.chrome.driver"/>
+    <parameter name="mozilla" value="webdriver.gecko.driver"/>
+
+    <parameter name="chromepath" value="C:\Users\resha\IdeaProjects\MyFirstProject\Drivers\chromedriver97469271.exe"/>
+    <parameter name="mozillapath" value="C:\Users\resha\IdeaProjects\MyFirstProject\Drivers\geckodriver.exe"/>
+
+    <test verbose="2"
+          name="Test">
+
+        <classes>
+            <class name="TestCases.Parameter.param"/>
+        </classes>
+    </test>
+</suite>

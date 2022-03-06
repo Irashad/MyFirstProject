@@ -1,3 +1,4 @@
+/*
 package TestCases.Alerts;
 
 import Config.Base;
@@ -12,3 +13,4 @@ public class al extends Base {
 
     }
 }
+*/

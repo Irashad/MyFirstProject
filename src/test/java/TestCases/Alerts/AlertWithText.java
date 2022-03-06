@@ -1,3 +1,4 @@
+/*
 package TestCases.Alerts;
 
 import Config.Base;
@@ -43,3 +44,4 @@ public class AlertWithText extends Base {
 
     }
 }
+*/

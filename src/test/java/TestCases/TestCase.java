@@ -1,3 +1,4 @@
+/*
 package TestCases;
 import Config.Base;
 import org.openqa.selenium.By;
@@ -29,3 +30,4 @@ public class TestCase  extends Base {
     }
 
 }
+*/

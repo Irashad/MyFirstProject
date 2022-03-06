@@ -1,3 +1,4 @@
+/*
 package TestCases.Alerts;
 
 import Config.Base;
@@ -18,3 +19,4 @@ public class CancelAlert extends Base {
         driver.switchTo().alert().dismiss();
     }
 }
+*/
