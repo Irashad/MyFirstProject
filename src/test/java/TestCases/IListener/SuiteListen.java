@@ -12,7 +12,7 @@ public class SuiteListen implements ISuiteListener {
     public void onStart(ISuite suite) {
         ISuiteListener.super.onStart(suite);
         String suiteName = suite.getName().toLowerCase(Locale.ROOT);
-        Reporting.setParameters(suiteName+".html");
+        Reporting.setParameters(suiteName+".html"); // testreportum.html
     }
 
     @Override

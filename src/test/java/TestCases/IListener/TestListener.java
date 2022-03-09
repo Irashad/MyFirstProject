@@ -11,7 +11,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         ITestListener.super.onTestStart(result);
-        System.out.println("Test Case Basladi: " +result.getName());
         String methodName = result.getMethod().getMethodName();
         Reporting.test =  Reporting.extent.createTest(methodName);
         Reporting.test.log(Status.INFO,"Test Case "+methodName+ " startted");
@@ -20,7 +19,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);
-        System.out.println("Test Case Succes oldu: " + result.getName());
         String methodName = result.getMethod().getMethodName();
         Reporting.test.log(Status.PASS, "Test Case "+methodName+ " Successed");
     }
@@ -28,7 +26,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
-        System.out.println("Test Case Fail oldu: " + result.getName());
         String methodName = result.getMethod().getMethodName();
         Reporting.test.log(Status.FAIL, "Test Case "+methodName+ " Failed");
 
@@ -37,7 +34,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result) {
         ITestListener.super.onTestSkipped(result);
-        System.out.println("Test Case Skip oldu: " + result.getName());
 
     }
 
@@ -54,14 +50,12 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         ITestListener.super.onStart(context);
-        System.out.println("Umumi test Basladi  : " + context.getName());
 
     }
 
     @Override
     public void onFinish(ITestContext context) {
         ITestListener.super.onFinish(context);
-        System.out.println("Umumi test Bitdi  : " + context.getName());
 
     }
 }

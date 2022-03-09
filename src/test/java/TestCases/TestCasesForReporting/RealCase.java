@@ -22,7 +22,8 @@ public class RealCase extends Base {
     @Test
     public void login() {
 
-        Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login test");
+
+      //  Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login test");
        /* driver.get("http://eaapp.somee.com/");
         HomePage homePage = new HomePage();
         homePage.clickSignInBtn();
@@ -36,7 +37,7 @@ public class RealCase extends Base {
 
     @Test
     public void login2() {
-        Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login2 test");
+       // Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login2 test");
 
       /*  driver.get("http://eaapp.somee.com/");
         HomePage homePage = new HomePage();
