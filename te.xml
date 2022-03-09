@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="MyRestSuite">
 
     <listeners>
         <listener class-name="TestCases.IListener.TestListener"/>
+        <listener class-name="TestCases.IListener.SuiteListen"/>
     </listeners>
 
     <test verbose="2"
           name="Login Scenario">
         <classes>
-            <class name="TestCases.test1"/>
-            <class name="TestCases.test2"/>
+            <class name="TestCases.TestCasesForReporting.RealCase"/>
+            <class name="TestCases.TestCasesForReporting.TestTwo"/>
         </classes>
     </test>
 </suite>
