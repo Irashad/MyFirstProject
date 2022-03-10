@@ -48,9 +48,9 @@ public class Reports {
         test2.log(Status.INFO,"Ad yazildi:"+username);
       driver.findElement(By.id("Password")).sendKeys(password);
         test2.log(Status.INFO,"Password yazildi: "+password);
-
         driver.findElement(By.cssSelector("input[type='submit']")).click();
         test2.log(Status.INFO,"Girise clicklendi");
+
 
         Thread.sleep(3000);
       String sehifedeOlan = driver.findElement(By.cssSelector("a[title='Manage']")).getText();
