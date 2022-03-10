@@ -63,17 +63,24 @@ public class frame extends Base {
     @Test
     public void multipleIframes()
     {
-        driverWait= new WebDriverWait(driver,Duration.ofSeconds(10));
         driver.get("http://demo.automationtesting.in/Frames.html");
        driver.findElement(By.xpath("//a[@href='#Multiple']")).click();
-       driver.switchTo().frame(0);
        driver.switchTo().frame(1);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        System.out.println(size);
+        driver.switchTo().frame(0);
+        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("i am text");
 
-      /*  driver.findElement(By.xpath("//input[@type='text']")).sendKeys("i am text");
-
-        driver.switchTo().defaultContent();
-        driver.findElement(By.xpath("//li/a[@href='Index.html']")).click();*/
-        //iframe[@src='MultipleFrames.html']
     }
 
+    @Test
+    public void nextedFrames()
+    {
+        driver.get("https://demoqa.com/nestedframes"); //url
+
+        driver.switchTo().frame("frame1"); //ilk frame (gorunen birinci frame)
+        driver.switchTo().frame(0); // ilk framein icindeki frame
+        System.out.println(driver.findElement(By.xpath("//body/p")).getText());  //icdeki framein textni yazdirmaq
+
+    }
 }
