@@ -1,6 +1,7 @@
 package TestCases.AUI;
 
 
+import Config.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,14 +13,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class dragAndDrop {
-    //TODO:
-    WebDriver driver;
-    @BeforeTest
-    public void BeforeTest(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\resha\\IdeaProjects\\MyFirstProject\\src\\test\\java\\chromedriver97469271.exe");
-        driver = new ChromeDriver();
-    }
+public class dragAndDrop extends Base {
+
     @Test
     public void rightClick() throws InterruptedException {
         driver.manage().window().maximize();
@@ -37,8 +32,7 @@ public class dragAndDrop {
         //Dragged and dropped.
         Action dragAndDrop = builder.dragAndDrop(From,To).build();
         dragAndDrop.perform();
-        Thread.sleep(5000);
-    }
+     }
     @AfterTest
     public void afterTest(){System.out.println("Test Finished Successfully");}
 }

@@ -1,5 +1,6 @@
 
 package TestCases.AUI;
+import Config.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,23 +14,23 @@ import org.testng.annotations.Test;
 
 import java.awt.*;
 
-public class keydown{
-    WebDriver driver;
-    @BeforeTest
-    public void BeforeTest(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\resha\\IdeaProjects\\MyFirstProject\\src\\test\\java\\chromedriver97469271.exe");
-        driver = new ChromeDriver();
-    }
+public class keydown extends Base {
+
     @Test
-    public void ff() throws InterruptedException {
+    public void ff()   {
         driver.get("https://demoqa.com/text-box");
 
         Actions builder = new Actions(driver);
+
         WebElement inputfield = driver.findElement(By.id("userName"));
+
+
         Action seriesofActions = builder
                 .click()
                 .keyDown(inputfield,Keys.SHIFT)
                 .sendKeys("salam").build();
+
+
         seriesofActions.perform();
     }
 }

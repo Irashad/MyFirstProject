@@ -12,13 +12,13 @@ public class TestTwo extends Base {
     public void Mogin() {
         Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Mogin test");
 
-       /* driver.get("http://eaapp.somee.com/");
+        driver.get("http://eaapp.somee.com/");
         HomePage homePage = new HomePage();
         homePage.clickSignInBtn();
         LoginPage loginPage = new LoginPage();
         loginPage.sendKeysToUserName("username");
         loginPage.sendKeysToPassword("password");
-        loginPage.clickLoginBtn();*/
+        loginPage.clickLoginBtn();
         Reporting.test.createNode("nebilim vallah").log(Status.PASS,"sss");
 
 
