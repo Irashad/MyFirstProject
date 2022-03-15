@@ -13,11 +13,13 @@ public class SuiteListen implements ISuiteListener {
         ISuiteListener.super.onStart(suite);
         String suiteName = suite.getName().toLowerCase(Locale.ROOT);
         Reporting.setParameters(suiteName+".html"); // testreportum.html
+
     }
 
     @Override
     public void onFinish(ISuite suite) {
         ISuiteListener.super.onFinish(suite);
         Reporting.extent.flush();
+    //    System.out.println(suite.getSuiteState());
     }
 }

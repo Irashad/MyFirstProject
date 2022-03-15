@@ -15,14 +15,13 @@ import org.testng.annotations.Test;
 
 
 
-public class RealCase extends Base {
+public class RealCase  {
 
 
 
     @Test
     public void login() {
-
-
+Assert.assertTrue(false);
       //  Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login test");
        /* driver.get("http://eaapp.somee.com/");
         HomePage homePage = new HomePage();
@@ -38,6 +37,21 @@ public class RealCase extends Base {
     @Test
     public void login2() {
        // Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login2 test");
+
+      /*  driver.get("http://eaapp.somee.com/");
+        HomePage homePage = new HomePage();
+        homePage.clickSignInBtn();
+        LoginPage loginPage = new LoginPage();
+        loginPage.sendKeysToUserName("username");
+        loginPage.sendKeysToPassword("password");
+        loginPage.clickLoginBtn();*/
+
+    }
+
+
+    @Test
+    public void login3() {
+        // Reporting.test.log(Status.INFO,"Navigating to eaapp.com| Login2 test");
 
       /*  driver.get("http://eaapp.somee.com/");
         HomePage homePage = new HomePage();

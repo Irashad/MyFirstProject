@@ -7,7 +7,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListener implements ITestListener {
-
+    public static boolean hasFailedTest = false;
     @Override
     public void onTestStart(ITestResult result) {
         ITestListener.super.onTestStart(result);
@@ -28,6 +28,7 @@ public class TestListener implements ITestListener {
         ITestListener.super.onTestFailure(result);
         String methodName = result.getMethod().getMethodName();
         Reporting.test.log(Status.FAIL, "Test Case "+methodName+ " Failed");
+        hasFailedTest = true;
 
     }
 
@@ -56,6 +57,11 @@ public class TestListener implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         ITestListener.super.onFinish(context);
-
+        if(context.getFailedTests().size() != 0 )  // 1 !=    -> true
+        {
+            System.out.println("Test Failed");
+        }else{
+            System.out.println("Test Success");
+        }
     }
 }
