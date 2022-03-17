@@ -32,8 +32,6 @@ public class TestCaseEnd extends Base {
         loginPage.sendKeysToUserName("admin");
         loginPage.sendKeysToPassword("password");
         loginPage.clickLoginBtn();
-
     }
-
 
 }
