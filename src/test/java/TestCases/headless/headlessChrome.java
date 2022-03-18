@@ -1,5 +1,5 @@
 package TestCases.headless;
-
+import Config.Base;
 import Config.DriverContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,35 +11,31 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
+public class headlessChrome extends Base {
 
-public class headlessChrome {
-    WebDriver driver;
-    WebDriverWait wait;
     @Test
     public void headlesS()
     {
         System.setProperty(DriverContext.chromeProperty,DriverContext.chromeDriverPath);
-        // TODO Auto-generated method stub
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+
+
         /*DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         options.merge(capabilities);*/
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
+
         driver.get("http://demo.guru99.com/");
         driver.manage().window().maximize();
         String title = driver.getTitle();
         System.out.println("Page Title: " +title);
 
     }
-
-
     //Examplelardan her hansi birini headless browser ile yoxlayaq
     @Test
-    public void rightWayOfGettingToolTipValue()
-    {
+    public void rightWayOfGettingToolTipValue(){
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         driver.get("https://www.w3schools.com/css/css_tooltip.asp");
@@ -49,12 +45,10 @@ public class headlessChrome {
         act.perform();
         out(wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.tooltip>span"))).getText());
     }
-
     public  void out(String s)
     {
         System.out.println(s);
     }
-
     @AfterSuite
     public void after()
     {

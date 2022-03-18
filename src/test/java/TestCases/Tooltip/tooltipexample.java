@@ -15,7 +15,6 @@ public class tooltipexample extends Base {
         driver.get("https://www.w3schools.com/css/css_tooltip.asp");
         out(wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.tooltip>span"))).getText());
 
-
     }
 
     @Test
